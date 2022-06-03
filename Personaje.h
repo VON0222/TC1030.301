@@ -23,6 +23,7 @@ class Personaje{
         void caminar();
         void saltarVentana();
         void interactuarPale();
+        virtual string to_string() = 0;
 };
 
 Personaje::Personaje(){

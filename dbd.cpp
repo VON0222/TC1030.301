@@ -25,11 +25,13 @@ int main(){
     Claudette.interactuarPale();
 
     MapaInt RPD(20,3);
+    RPD.creachara();
     RPD.GenerarMapa();
     RPD.ColocarPersonajes();
     RPD.Collapsar();
 
     MapaExt GardenOfJoy(24,"Casa Retorcida");
+    GardenOfJoy.creachara();
     GardenOfJoy.GenerarMapa();
     GardenOfJoy.ColocarPersonajes();
     GardenOfJoy.Collapsar();

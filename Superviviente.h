@@ -27,6 +27,7 @@ class Superviviente : public Personaje{
         void Herir();
         void Curar();
         void Muerte();
+        string to_string();
 };
 
 string Superviviente::getEstadoSalud(){
@@ -64,6 +65,15 @@ void Superviviente::Curar(){
 void Superviviente::Muerte(){
     cout<<"Perdiste!!"<<endl;
     cout<<"El asesino te ha matado!"<<endl;
+}
+
+string Superviviente::to_string(){
+    stringstream datos;
+    datos << "El superviviente es " << getNombre() << 
+    ", con una altura de " << getAltura() << 
+    ", un volumen de " << getVolumen() << 
+    " y con un estado de salud " << EstadoSalud <<"\n";
+    return datos.str();
 }
 
 #endif

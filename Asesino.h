@@ -3,6 +3,7 @@
 
 #include "Personaje.h"
 #include <iostream>
+#include <sstream>
 #include <string>
 
 using namespace std;
@@ -31,6 +32,7 @@ class Asesino : public Personaje{
         void setNombreHabilidad();
         void AtaqueS();
         void Stun();
+        string to_string();
 };
 
 int Asesino::getRadioTerror(){
@@ -68,10 +70,21 @@ void Asesino::interactuarPale(){
 void Asesino::AtaqueS(){
     cout<<"El asesino ha atacado..."<<endl;
     cout<<"No hay nadie a quien hacer daño"<<endl;
+    
 }
 
 void Asesino::Stun(){
     cout<<"Te han aturdido durante 2 segundos"<<endl;
+}
+
+string Asesino::to_string(){
+    stringstream datos;
+    datos << "El asesino es " << getNombre() << 
+    ", con una altura de " << getAltura() << 
+    ", un volumen de " << getVolumen() << 
+    ", un radio de terror de " << RadioTerror <<
+    " y con la habilidad " << NombreHabilidad << "\n";
+    return datos.str();
 }
 
 #endif

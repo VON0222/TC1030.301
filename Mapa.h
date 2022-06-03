@@ -14,6 +14,7 @@ class Mapa{
         Mapa(int numT);
         int getTiles();
         void setTiles();
+        void creachara();
         void GenerarMapa();
         void Collapsar();
         void ColocarPersonajes();
