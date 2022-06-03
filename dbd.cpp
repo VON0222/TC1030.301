@@ -35,4 +35,6 @@ int main(){
     GardenOfJoy.GenerarMapa();
     GardenOfJoy.ColocarPersonajes();
     GardenOfJoy.Collapsar();
+
+    return 0;
 }
