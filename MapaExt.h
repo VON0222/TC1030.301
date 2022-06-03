@@ -2,6 +2,9 @@
 #define MAPAEXT_H
 
 #include "Mapa.h"
+#include "Superviviente.h"
+#include "Asesino.h"
+#include "Personaje.h"
 #include <iostream>
 #include <string>
 
@@ -65,7 +68,7 @@ void MapaExt::Collapsar(){
 }
 
 void MapaExt::ColocarPersonajes(){
-    for (int i = 0; i < 6; i++)
+    for (int i = 0; i < 5; i++)
         cout<<charaE[i] -> to_string();
     cout<<"Los personajes estan en el mapa"<<endl;
 }

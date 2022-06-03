@@ -68,7 +68,7 @@ void MapaInt::Collapsar(){
 }
 
 void MapaInt::ColocarPersonajes(){
-    for (int i = 0; i < 6; i++)
+    for (int i = 0; i < 5; i++)
         cout<<charaI[i] -> to_string();
     cout<<"Los personajes estan en el mapa"<<endl;
 }
