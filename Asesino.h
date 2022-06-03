@@ -26,10 +26,10 @@ class Asesino : public Personaje{
         int getRadioTerror();
         void setRadioTerror();
         string getNombreHabilidad();
+        void setNombreHabilidad();
         void caminar();
         void saltarVentana();
         void interactuarPale();
-        void setNombreHabilidad();
         void AtaqueS();
         void Stun();
         string to_string();
