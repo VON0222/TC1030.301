@@ -8,3 +8,5 @@ Una vez creados se podran generar, colocar los personajes creados en estos mapas
 
 El problema que se busca solucionar principalmente es el poder visualizar la diferencia de tiempos que toma realizar cada una de las acciones dependiendo del bando en el que se este jugando, ademas de la visualización de ciertos datos que pueden ser de utilidad (¿que tan ruidoso es un personaje?, su altura, etc.). 
 De esta manera este programa puede ser de utilidad para jugadores que buscan generar estrategias para poder huir/atrapar mas eficazmente.
+
+Este proyecto fue realizado por José Diego Llaca Castro
