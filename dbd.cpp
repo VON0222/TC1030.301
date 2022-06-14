@@ -7,12 +7,22 @@
 using namespace std;
 
 int main(){                                                 //Este es el main para correr el programa.
+    cout<<"Hola usuario, elige que deseas hacer:"<<endl;
+    cout<<"(1) Checar acciones de asesinos"<<endl;
+    cout<<"(2) Checar acciones de supervivientes"<<endl;
+    cout<<"(3) Generar un mapa interior"<<endl;
+    cout<<"(4) Generar un mapa exterior"<<endl;
+    int choice;
+    cin>>choice;
+    
+    if (choice==1){
     Asesino default1;                                       //Se crea un objeto de clase Asesino con el constructor por default.
     Asesino Trapper("Trapper", 1.80, 100, 32, "Trampas");   //Se crea un objeto "Trapper" de clase Asesino con el constructor sobrecargado.
     cout<<default1.getVolumen()<<endl;                      //Se imprime el atributo Volumen del objeto Asesino creado con el constructor por default.
     Trapper.saltarVentana();                                //Se llama al metodo saltarVentana del objeto "Trapper".
     Trapper.AtaqueS();                                      //Se llama al metodo AtaqueS del objeto "Trapper".
-
+    }
+    else if (choice==2){
     Superviviente default2;                                 //Se crea un objeto de clase Superviviente con el constructor por default.
     Superviviente Jake("Jake", 1.60, 90, "sano");           //Se crean los objetos "Jake", "Meg", "Dwight" y 
     Superviviente Meg("Meg", 1.55, 105, "sano");            //"Claudette" de clase Superviviente con el 
@@ -23,18 +33,23 @@ int main(){                                                 //Este es el main pa
     Meg.caminar();                                          //Se llama al metodo caminar del objeto "Meg".
     Dwight.Herir();                                         //Se llama al metodo Herir del objeto "Dwight".
     Claudette.interactuarPale();                            //Se llama al metodo interactuarPale del objeto "Claudette".
-
+    }
+    else if (choice==3){
     MapaInt RPD(20,3);                                      //Se crea un objeto "RPD" de clase MapaInt con el constructor sobrecargado.
     RPD.creachara();                                        //Se llama al metodo creachara del objeto "RPD".
     RPD.GenerarMapa();                                      //Se llama al metodo GenerarMapa del objeto "RPD".
     RPD.ColocarPersonajes();                                //Se llama al metodo ColocarPersonajes del objeto "RPD".
     RPD.Collapsar();                                        //Se llama al metodo Collapsar del objeto "RPD".
-
+    }
+    else if (choice==4){
     MapaExt GardenOfJoy(24,"Casa Retorcida");               //Se crea un objeto "GardenOfJoy" de clase MapaExt con el constructor sobrecargado.
     GardenOfJoy.creachara();                                //Se llama al metodo creachara del objeto "GardenOfJoy".
     GardenOfJoy.GenerarMapa();                              //Se llama al metodo GenerarMapa del objeto "GardenOfJoy".
     GardenOfJoy.ColocarPersonajes();                        //Se llama al metodo ColocarPersonajes del objeto "GardenOfJoy".
     GardenOfJoy.Collapsar();                                //Se llama al metodo Collapsar del objeto "GardenOfJoy".
-
+    }
+    else {
+    cout<<"Opcion no encontrada"<<endl;
+    }
     return 0;                                               //Se finaliza el main.
 }

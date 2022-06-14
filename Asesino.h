@@ -72,7 +72,7 @@ void Asesino::interactuarPale(){                            //Se sobre escribe e
 
 void Asesino::AtaqueS(){                                    //Se declara el metodo AtaqueS el cual imprime que el 
     cout<<"El asesino ha atacado..."<<endl;                 //asesino ha atacado, pero no ha logrado golpear a
-    cout<<"No hay nadie a quien hacer daño"<<endl;          //nadie.
+    cout<<"No hay nadie a quien hacer danio"<<endl;          //nadie.
     
 }
 
