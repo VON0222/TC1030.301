@@ -16,8 +16,11 @@ Una vez creados se podran generar, colocar los personajes creados en estos mapas
 ## ¿Que hace el programa?
 
 Una vez iniciado el programa pedirá al usuario que elija alguna de las cuatro (4) opciones disponibles. Dependiendo de la elección el programa hará diferentes acciones. La elección 1 generara un objecto asesino por default, imprimira el volumen de este asesino y generara un asesino llamado "Trapper" el cual realizara las acciones (métodos) saltarVentana() y AtaqueS() los cuales imprimen el tiempo que tarda el asesino en realizar estas acciones.
+
 Le elección 2 generara un objecto superviviente por default, imprimira el volumen de este superviviente y generara cuatro supervivientes llamados "Jake", "Meg", "Dwight" y "Claudette" el cual realizara las acciones (métodos) saltarVentana(), caminar(), Herir() e interactuarPale() los cuales imprimen el tiempo que tarda cada superviviente en realizar estas acciones y las consecuencias de algunas de estas acciones.
+
 La elección 3 genera un mapa interior llamado "RPD" y llama los métodos creachara(), GenerarMapa(), ColocarPersonajes() y Collapsar() los que crean objetos de tipo superviviente y asesino para el mapa, imprime que genera el mapa, imprimen los objetos asesino y supervivientes al ser colocados en el mapa e imprimen el tiempo en el que el mapa se autodestruirá.
+
 Y por ultimo la elección 4 genera un mapa exterior llamado "GardenOfJoy" y llama los métodos creachara(), GenerarMapa(), ColocarPersonajes() y Collapsar() los que crean objetos de tipo superviviente y asesino para el mapa, imprime que genera el mapa, imprimen los objetos asesino y supervivientes al ser colocados en el mapa e imprimen el tiempo en el que el mapa se autodestruirá.
 
 ## Posibles errores:
