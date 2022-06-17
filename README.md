@@ -27,4 +27,8 @@ Y por ultimo la elección 4 genera un mapa exterior llamado "GardenOfJoy" y llam
 
 Realmente no veo alguna manera en la cual el usuario podria generar un error, ya que el unico sistema que el usuario podria ingresar un input inesperado es en el if del main en el que se pide su elección sobre que quiere que haga el programa, pero en caso de que el usuario de como input una opción no valida el programa imprimira que esa opción no es valida y finalizará su ejecución.
 
+## Correcciones:
+
+No hay correciones.
+
 Este proyecto fue realizado por José Diego Llaca Castro
