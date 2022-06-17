@@ -1,17 +1,27 @@
-/*Este es el header de la clase hija Superviviente, esta clase hereda todos los atributos y metodos
- de la clase Personaje, sobre escribe algunos metodos e implementa el metodo virtual heredado de la
- clase Personaje.*/
+/*
+ * Proyecto DBD main
+ * José Diego Llaca Castro
+ * A01704793
+ * 16/06/2022
+ * Versión: 4
+ * Este es el header de la clase hija Superviviente, esta clase hereda 
+ * todos los atributos y metodos de la clase Personaje, sobre escribe 
+ * algunos metodos e implementa el metodo virtual heredado de la
+ * clase Personaje.
+ */
+
 #ifndef SUPERVIVIENTE_H
 #define SUPERVIVIENTE_H
 
-#include "Personaje.h"
+#include "Personaje.h"          //biblioteca con mis objetos a usar.
 #include <iostream>
 #include <string>
 
 using namespace std;
 
-class Superviviente : public Personaje{                                 //La clase recibe herencia de la clase 
+class Superviviente : public Personaje{                                 //La clase hereda de la clase 
     private:                                                            //Personaje.
+    //Declaro las variables privadas de instancia.                                                            
         string EstadoSalud;                                             //Solo tiene un atributo ademas de los 
     public:                                                             //heredados de Personaje.
         Superviviente():Personaje(){                                    //Tiene su constructor por default.
@@ -33,47 +43,138 @@ class Superviviente : public Personaje{                                 //La cla
         string to_string();                                 //Tiene el metodo heredado para implementar 
 };                                                          //polimorfismo.
 
-string Superviviente::getEstadoSalud(){                     //Geter del atributo EstadoSalud.
+/**
+ * getEstadoSalud devuelve el valor de EstadoSalud.
+ * 
+ * Al llamar este método devuelve el valor de EstadoSalud el cual es 
+ * string.
+ * 
+ * @param
+ * @return string 
+ */
+
+string Superviviente::getEstadoSalud(){                     
     return EstadoSalud;
 }
 
-void Superviviente::setEstadoSalud(){                       //Seter del atributo EstadoSalud 
+/**
+ * setEstadoSalud da un valor a EstadoSalud.
+ * 
+ * Al llamar este método pide al usuario un string para guardar en 
+ * EstadoSalud.
+ * 
+ * @param 
+ * @return
+ */
+
+void Superviviente::setEstadoSalud(){                       
     string salud;                                           
     cin>>salud;
     EstadoSalud = salud;
 }
 
-void Superviviente::caminar(){                              //Se sobre escribe el metodo caminar que imprime la 
-    cout<<"Avanzas a una velocidad de 4 m/s"<<endl;         //velocidad del personaje.
+/**
+ * caminar imprime la velocidad del asesino.
+ * 
+ * Al llamar este método imprime la velocidad del superviviente.
+ * 
+ * @param 
+ * @return
+ */
+
+void Superviviente::caminar(){                               
+    cout<<"Avanzas a una velocidad de 4 m/s"<<endl;         
 }
 
-void Superviviente::saltarVentana(){                        //Se sobre escribe el metodo saltarVentana que  
-    cout<<"Saltas la ventana en 0.5 segundos"<<endl;        //imprime el tiempo que tarda en saltar la ventana.
+/**
+ * saltarVentana imprime el tiempo que toma saltar una ventana.
+ * 
+ * Al llamar este método se imprime el tiempo que le toma al superviviente
+ * saltar una ventana.
+ * 
+ * @param  
+ * @return
+ */
+
+void Superviviente::saltarVentana(){                          
+    cout<<"Saltas la ventana en 0.5 segundos"<<endl;        
 }
 
-void Superviviente::interactuarPale(){                      //Se sobre escribe el metodo interactuarPale que 
-    cout<<"Saltas el pale en 0.5 segundos"<<endl;           //imprime el tiempo que tarda en saltar el pale.
+/**
+ * interactuarPale imprime el tiempo que toma interactuar con un pale.
+ * 
+ * Al llamar este método se imprime el tiempo que le toma al superviviente
+ * saltar un pale.
+ * 
+ * @param 
+ * @return
+ */
+
+void Superviviente::interactuarPale(){                       
+    cout<<"Saltas el pale en 0.5 segundos"<<endl;           
 }
+
+/**
+ * Herir imprime al superviviente perdiendo un estado de salud.
+ * 
+ * Al llamar este método imprime que el superviviente pierde un estado
+ * de salud y muestra a que estado pasa.
+ * 
+ * @param
+ * @return
+ */
 
 void Superviviente::Herir(){
-    cout<<"Pierdes un estado de salud!"<<endl;              //Se declara el metodo Herir que imprime que el 
-    cout<<"Pasas de "<<EstadoSalud<<" a herido"<<endl;      //superviviente pierde un estado de salud y 
-}                                                           //muestra a que estado pasa.
+    cout<<"Pierdes un estado de salud!"<<endl;              
+    cout<<"Pasas de "<<EstadoSalud<<" a herido"<<endl;       
+}          
 
-void Superviviente::Curar(){                                //Se declara el metodo Curar que imprime que el 
-    cout<<"Ganas un estado de salud!"<<endl;                //gana un estado de salud y muestra de que estado
-    cout<<"Pasas de herido a "<<EstadoSalud<<endl;          //a que estado pasa.
+/**
+ * Curar imprime al superviviente ganando un estado de salud.
+ * 
+ * Al llamar este método imprime que el superviviente gana un estado 
+ * de salud y muestra a que estado pasa.
+ * 
+ * @param 
+ * @return
+ */
+
+void Superviviente::Curar(){                                 
+    cout<<"Ganas un estado de salud!"<<endl;                
+    cout<<"Pasas de herido a "<<EstadoSalud<<endl;          
 }
 
-void Superviviente::Muerte(){                               //Se declara el metodo Muerte que imprime cuando 
-    cout<<"Perdiste!!"<<endl;                               //el superviviente pierde y es asesinado.
+/**
+ * Muerte imprime al superviviente muriendo y perdiendo el juego.
+ * 
+ * Al llamar este método imprime cuando el superviviente pierde 
+ * y es asesinado.
+ * 
+ * @param 
+ * @return
+ */
+
+void Superviviente::Muerte(){                                
+    cout<<"Perdiste!!"<<endl;                               
     cout<<"El asesino te ha matado!"<<endl;
 }
 
-string Superviviente::to_string(){                          //Se declara el metodo to_string el cual crea una
-    stringstream datos;                                     //cadena de string para mostrar todos los datos
-    datos << "El superviviente es " << getNombre() <<       //del superviviente. Este metodo sera llamado para 
-    ", con una altura de " << getAltura() <<                //mostrar polimorfismo.
+/**
+ * to_string crea una cadena de string para mostrar los atributos de 
+ * superviviente.
+ * 
+ * Al llamar este método crea una cadena de string para mostrar todos 
+ * los datos del objeto superviviente. Este método es llamado para mostrar 
+ * polimorfismo.
+ * 
+ * @param
+ * @return string con los valores y tecto concatenado.
+ */
+
+string Superviviente::to_string(){                          
+    stringstream datos;                                     
+    datos << "El superviviente es " << getNombre() <<       
+    ", con una altura de " << getAltura() <<                
     ", un volumen de " << getVolumen() << 
     " y con un estado de salud " << EstadoSalud <<"\n";
     return datos.str();

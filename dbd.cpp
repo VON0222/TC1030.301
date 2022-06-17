@@ -1,8 +1,21 @@
-#include "Asesino.h"
-#include "Superviviente.h"
-#include "MapaExt.h"
-#include "MapaInt.h"
-#include <iostream>
+/*
+ * Proyecto DBD main
+ * José Diego Llaca Castro
+ * A01704793
+ * 16/06/2022
+ * Versión: 7
+ * Este es un proyecto demo para la clase TC1030 Programación Orientado a
+ * Objetos. Es un programa que genera supervivientes y asesinos para el 
+ * videojuego Dead By Daylight con sus atributos respectivos, ademas 
+ * genera mapas interiores y exteriores y coloca los personajes generados 
+ * dentro de ellos.
+ */
+
+#include "Asesino.h"            //Biblioteca con objetos de mi proyecto.
+#include "Superviviente.h"      //Biblioteca con objetos de mi proyecto.
+#include "MapaExt.h"            //Biblioteca con objetos de mi proyecto.
+#include "MapaInt.h"            //Biblioteca con objetos de mi proyecto.
+#include <iostream>             //Para imprimir.
 
 using namespace std;
 
